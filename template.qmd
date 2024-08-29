@@ -1,0 +1,116 @@
+---
+title: "Title of the paper "
+authors:
+  - name: First Author
+    affiliation: University of Somewhere
+  - name: Second Author
+    affiliation: University of Elsewhere
+abstract: 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at elit vel orci congue congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent auctor, sapien eget malesuada efficitur, magna sem facilisis metus, at venenatis metus arcu a tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus euismod, sapien in vestibulum interdum, purus velit efficitur mauris, ac ornare urna eros eget nulla. Vivamus nec libero et erat sagittis congue. Duis auctor, sapien sed tincidunt efficitur, magna neque congue velit, vel congue augue lacus eget metus. Donec auctor, nibh eget posuere efficitur, magna est tincidunt nulla, at condimentum sapien est a sem.
+format: 
+    wm-manuscript-typst:
+      citeproc: false
+fontsize: 12pt
+bibliography: refs.json
+wordcount: "{{< words-body >}}"
+date: 2024-08-29
+---
+
+```{r}
+#| echo: false
+#| warning: false
+library(tinytable)
+library(tidyverse)
+```
+
+# Intro
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at elit vel orci congue congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent auctor, sapien eget malesuada efficitur, magna sem facilisis metus, at venenatis metus arcu a tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus euismod, sapien in vestibulum interdum, purus velit efficitur mauris, ac ornare urna eros eget nulla. Vivamus nec libero et erat sagittis congue. Duis auctor, sapien sed tincidunt efficitur, magna neque congue velit, vel congue augue lacus eget metus. Donec auctor, nibh eget posuere efficitur, magna est tincidunt nulla, at condimentum sapien est a sem.
+
+
+# Theory
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit [@Jaspers-etal2024]. Praesent at elit vel orci congue congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent auctor, sapien eget malesuada efficitur, magna sem facilisis metus, at venenatis metus arcu a tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus euismod, sapien in vestibulum interdum, purus velit efficitur mauris, ac ornare urna eros eget nulla. Vivamus nec libero et erat sagittis congue. Duis auctor, sapien sed tincidunt efficitur, magna neque congue velit, vel congue augue lacus eget metus . Donec auctor, nibh eget posuere efficitur, magna est tincidunt nulla, at condimentum sapien est a sem [@MachadoJaspers2023].
+
+# Data and metthod
+
+## Sample
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at elit vel orci congue congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent auctor, sapien eget malesuada efficitur, magna sem facilisis metus, at venenatis metus arcu a tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus euismod, sapien in vestibulum interdum, purus velit efficitur mauris, ac ornare urna eros eget nulla. Vivamus nec libero et erat sagittis congue. Duis auctor, sapien sed tincidunt efficitur, magna neque congue velit, vel congue augue lacus eget metus. Donec auctor, nibh eget posuere efficitur, magna est tincidunt nulla, at condimentum sapien est a sem.
+
+## Variables
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at elit vel orci congue congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent auctor, sapien eget malesuada efficitur, magna sem facilisis metus, at venenatis metus arcu a tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus euismod, sapien in vestibulum interdum, purus velit efficitur mauris, ac ornare urna eros eget nulla. Vivamus nec libero et erat sagittis congue. Duis auctor, sapien sed tincidunt efficitur, magna neque congue velit, vel congue augue lacus eget metus. Donec auctor, nibh eget posuere efficitur, magna est tincidunt nulla, at condimentum sapien est a sem.[^1]
+
+## Analytical strategy
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at elit vel orci congue congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent auctor, sapien eget malesuada efficitur, magna sem facilisis metus, at venenatis metus arcu a tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus euismod, sapien in vestibulum interdum, purus velit efficitur mauris, ac ornare urna eros eget nulla. Vivamus nec libero et erat sagittis congue. Duis auctor, sapien sed tincidunt efficitur, magna neque congue velit, vel congue augue lacus eget metus. Donec auctor, nibh eget posuere efficitur, magna est tincidunt nulla, at condimentum sapien est a sem.
+
+Also see @tbl-test. There is also @tbl-app1 in the Appendix.
+
+Some math here:
+$$ \lambda x: x^2 $$
+
+# Results
+
+
+```{r}
+#| echo: FALSE
+#| label: tbl-test
+#| tbl-cap: This is an awesome table
+dat <- mtcars[1:9, 1:8]
+tt(dat) |> 
+  group_tt(
+    j = list(
+      "Hamburgers" = 1:3,
+      "Halloumi" = 4:5,
+      "Tofu" = 7))
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at elit vel orci congue congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. We can see the same in @fig-scatter. 
+
+
+```{r}
+#| echo: FALSE
+#| warning: false
+#| label: fig-scatter
+#| fig-cap: This is an awesome figure
+library(tidyverse)
+ggplot(mtcars, aes(x = mpg, y = hp)) +
+  geom_point()
+```
+
+
+# References
+
+::: {#refs}
+:::
+
+
+
+[^1]: This is a footnote.	
+
+
+# Appendix {.appendix}
+
+## Appendix section
+
+```{r}
+#| echo: FALSE
+#| label: tbl-app1
+#| tbl-cap: This is a table in the appendix
+
+dat <- mtcars[1:9, 1:8]
+tt(dat) 
+```
+
+
+```{r}
+#| echo: FALSE
+#| label: tbl-app2
+#| tbl-cap: A second table in the appendix
+
+dat <- mtcars[1:9, 1:8]
+tt(dat) 
+```

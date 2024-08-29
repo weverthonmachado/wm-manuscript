@@ -1,0 +1,22 @@
+title: Typst manuscript
+author: Weverthon Machado
+version: 1.0.0
+quarto-required: ">=1.4.11"
+contributes:
+  format:
+    typst:
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ
+      citeproc: true
+      link-citations: true 
+      filters:
+        - format_appendix.lua
+        - format_refs.lua
+        - at: pre-quarto
+          path: citeproc.lua
+        - at: pre-quarto
+          path: wordcount.lua
+      shortcodes: 
+        - words.lua
+
