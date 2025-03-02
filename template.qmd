@@ -10,7 +10,9 @@ abstract:
 format: 
     wm-manuscript-typst:
       citeproc: false
+      keep-typ: true
 fontsize: 12pt
+font: "Crimson Pro"
 bibliography: refs.json
 wordcount: "{{< words-body >}}"
 date: 2024-08-29
@@ -26,6 +28,8 @@ library(tidyverse)
 # Intro
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at elit vel orci congue congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent auctor, sapien eget malesuada efficitur, magna sem facilisis metus, at venenatis metus arcu a tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus euismod, sapien in vestibulum interdum, purus velit efficitur mauris, ac ornare urna eros eget nulla. Vivamus nec libero et erat sagittis congue. Duis auctor, sapien sed tincidunt efficitur, magna neque congue velit, vel congue augue lacus eget metus. Donec auctor, nibh eget posuere efficitur, magna est tincidunt nulla, at condimentum sapien est a sem.
+
+And here is an example of a <!--! highlighthed text. -->
 
 
 # Theory

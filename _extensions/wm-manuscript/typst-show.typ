@@ -36,4 +36,7 @@ $endif$
 $if(wordcount)$
   wordcount: [$wordcount$],
 $endif$
+$if(font)$
+  font: "$font$",
+$endif$
 )

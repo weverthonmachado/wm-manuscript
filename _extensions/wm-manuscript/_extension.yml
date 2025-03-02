@@ -13,6 +13,7 @@ contributes:
       filters:
         - format_appendix.lua
         - format_refs.lua
+        - highlight.lua
         - at: pre-quarto
           path: citeproc.lua
         - at: pre-quarto
