@@ -39,4 +39,7 @@ $endif$
 $if(font)$
   font: "$font$",
 $endif$
+$if(font)$
+  fontsize: $fontsize$,
+$endif$
 )
