@@ -114,6 +114,8 @@
   // Configure links.
   show link: set text(fill: rgb("#20425e"))
 
+  // Space around figures
+  show figure: set block(inset: (top: 0.5em, bottom: 2em))
 
   // CONTENTS //
 
