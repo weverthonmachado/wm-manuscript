@@ -22,6 +22,8 @@
 
   anonymous: false,
 
+  title-page-only: false,
+
   wordcount: none,
 
   date: none,
@@ -129,27 +131,28 @@
     show_authors
   }
   
-  // Display date and word count
-  if date != none or wordcount != none {
-  align(center)[
-    #text(size: footnote-size)[
-      \(#if date != none [#date, ]#if wordcount != none [#wordcount words]\)
+  if not title-page-only {
+    // Display date and word count
+    if date != none or wordcount != none {
+    align(center)[
+      #text(size: footnote-size)[
+        \(#if date != none [#date, ]#if wordcount != none [#wordcount words]\)
+      ]
     ]
-  ]
-  }
-  // Display the abstract
-  if abstract != none {
-    v(20pt, weak: true)
-    set text(normal-size)
-    show: pad.with(x: 35pt)
-    show par: set par(leading: 0.65em)
-    abstract
-  }
+    }
+    // Display the abstract
+    if abstract != none {
+      v(20pt, weak: true)
+      set text(normal-size)
+      show: pad.with(x: 35pt)
+      show par: set par(leading: 0.65em)
+      abstract
+    }
 
-  // Display the article's contents.
-  v(29pt, weak: true)
-  body
-
+    // Display the article's contents.
+    v(29pt, weak: true)
+    body
+  }
 
 }
 

@@ -14,8 +14,13 @@ format:
 fontsize: 12pt
 font: "Crimson Pro"
 bibliography: refs.json
+# optionally specify CSL here. Despite "citeproc: false" above,
+# refs are still handled by citeproc via a Lua filter. 
+csl: APA-etal.csl 
 wordcount: "{{< words-body >}}"
 date: 2024-08-29
+title-page-only: false
+anonymous: false
 ---
 
 ```{r}

@@ -42,4 +42,10 @@ $endif$
 $if(font)$
   fontsize: $fontsize$,
 $endif$
+$if(anonymous)$
+  anonymous: $anonymous$,
+$endif$
+$if(title-page-only)$
+  title-page-only: $title-page-only$,
+$endif$
 )
