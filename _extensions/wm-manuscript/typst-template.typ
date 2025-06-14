@@ -78,8 +78,8 @@
   // Configure paragraph properties.
   set par(first-line-indent: 1.2em,
           justify: true, 
-          leading: normal-size*1.5)
-  show par: set block(spacing: normal-size*1.5)
+          leading: normal-size*1.5,
+          spacing: normal-size*1.5)
 
 
   // Headings
@@ -117,7 +117,7 @@
   show link: set text(fill: rgb("#20425e"))
 
   // Space around figures
-  show figure: set block(inset: (top: 0.5em, bottom: 2em))
+  // show figure: set block(inset: (top: 0.5em, bottom: 2em))
 
   // CONTENTS //
 

@@ -12,8 +12,8 @@ local typst_code = [[
 // Reset formatting that was changes for refs
 #set par(first-line-indent: 1.2em,
           justify: true, 
-          leading: 1.5em)
-#show par: set block(spacing: 1.5em)
+          leading: 1.5em,
+          spacing: 1.5em)
 ]]
 
 -- Function to process header elements
