@@ -57,8 +57,9 @@
       let aff = [#if(affiliations.len() > 1){super[#aff_id]}#affiliation.name]
       affs.push(aff)
     }
-    par(leading: normal-size)[#align(center)[#names.join(", ", last: " and ")]]
-    par(leading: normal-size)[#align(center)[_#affs.join("\n")_]]
+    align(center)[#par(leading: normal-size)[#names.join(", ", last: " and ")]]
+    align(center)[#par(leading: normal-size)[_#affs.join("\n")_]]
+    linebreak()
   }
 
 

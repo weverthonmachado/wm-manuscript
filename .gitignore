@@ -2,3 +2,5 @@
 *.pdf
 refs.json
 *.svg
+*.knit.md
+template.typ
